@@ -1,48 +1,32 @@
-import { useState , useEffect } from 'react'
+import { useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import News from './components/News'
+import ChartBar from './components/ChartBar'
+import CalendarItem from './components/CalendarItem'
+import Header from "./layout/Header";
+import SideBar from "./layout/SideBar";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
-const [name , SetName] = useState("名前入力");
-const [email , SetEmail] = useState("メールアドレス入力");
-
-const handleNameChange = (e) =>{ 
-  SetName(e.target.value);
-}
-
-const handleEmailChange = (e) =>{ 
-  SetEmail(e.target.value);
-};
-
-
-
-useEffect(()=>{
-    // この中に書きます🤗
-
-    console.log("起動しました！！！");
-    // この下は消さない
-  },[])
-;
-
-    console.log("colsoleログの順番確認");
 
   return (
-    <>
-      {/* */}
-      <News />
-<div>
-<p>名前が入ります</p>
-<input type="text" placeholder="名前を入力してください" value={name} onChange={handleNameChange}/>
+    <BrowserRouter>
+      <div>
+        <Header />
 
-</div>
-<div>
-<p>メールアドレスが入ります</p>
-<input type="text" placeholder="メールアドレスを入力してください" value={email} onChange={handleEmailChange}/>
-</div>
-    {/*  */}
-    </>
+        <div style={{ display: "flex" }}>
+          <SideBar />
+
+          <div style={{ flex: 1, padding: "24px" }}>
+            <News />
+            <CalendarItem />
+            <ChartBar />
+          </div>
+        </div>
+      </div>
+    </BrowserRouter>
   )
 }
 
