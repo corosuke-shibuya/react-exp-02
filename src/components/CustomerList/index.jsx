@@ -10,9 +10,11 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 
-const SHEET_ID = "1JEzgYAeQTantoO_ullrpV9n7ZYQRKCKZpH9z3sVDyAo"; // ここにスプレッドシートIDを入れます
 const SHEET_NAME = "test"; // ここにスプレッドシートのシート名を入れます
-const API_KEY = "AIzaSyC2cEzy9w-pYweiVsDxibz_QTtO9gI9Ycc"; // ここにAPIキーを入れます
+const SHEET_ID = import.meta.env.VITE_GOOGLE_SHEETS_SHEET_ID; // ここにスプレッドシートIDを入れます
+const API_KEY = import.meta.env.VITE_GOOGLE_SHEETS_API_KEY; // ここにAPIキーを入れます
+// const API_KEY = "AIzaSyC2cEzy9w-pYweiVsDxibz_QTtO9gI9Ycc";
+// const SHEET_ID = "1JEzgYAeQTantoO_ullrpV9n7ZYQRKCKZpH9z3sVDyAo"; 
 
 
 const CustomerList = () => {
