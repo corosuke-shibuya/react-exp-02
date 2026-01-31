@@ -5,7 +5,8 @@ import React from "react";
 import styles from "./style.module.scss";
 import Header from "../../layout/Header";
 import SideBar from "../../layout/SideBar";
-import ChartBar from "../../components/ChartBar";
+// import ChartBar from "../../components/ChartBar";
+import CustomerList from "../../components/CustomerList";
 
 const Chart = () => {
   return (
@@ -14,7 +15,8 @@ const Chart = () => {
       <div className={styles.chart}>
         {/*  */}
         <SideBar />
-        <ChartBar />
+        {/* <ChartBar /> */}
+        <CustomerList/>
         {/*  */}
       </div>
     </>
